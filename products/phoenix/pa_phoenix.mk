@@ -32,6 +32,12 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi K30
 PRODUCT_MANUFACTURER := Xiaomi
 
-BUILD_FINGERPRINT := POCO/phoenixin/phoenixin:10/QKQ1.190825.002/V12.0.2.0.QGHINXM:user/release-keys
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DISC="sunfish-user 11 RQ1A.210105.002 6985033 release-keys"
+
+BUILD_FINGERPRINT := google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
